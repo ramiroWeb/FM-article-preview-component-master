@@ -1,3 +1,50 @@
-body{
-    background: #fafa;
+@import "abstracts/variables";
+@import "core/reset";
+
+body {
+  font-family: $ff-manrope;
+  font-size: 0.875rem;
+  background-color: $clr-Light-Grayish-Blue;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+.article {
+  max-width: 600px;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  &__img {
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    padding: 1.8rem;
+    display: grid;
+    gap: 1rem;
+  }
+  &__description {
+    color: $clr-Grayish-Blue;
+    font-weight: $fw-bold;
+  }
+  /* &__title{
+        margin-block: 1rem;
+        
+    } */
+  &__flex-group {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    img {
+      height: 60px;
+      width: 60px;
+      border-radius: 50rem;
+    }
+    display: flex;
+    align-items: center;
+  }
 }
