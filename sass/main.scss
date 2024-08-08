@@ -16,6 +16,7 @@ body {
   background-color: white;
   border-radius: 1rem;
   overflow: hidden;
+  color: $clr-Grayish-Blue;
   &__img {
     img {
       width: 100%;
@@ -26,25 +27,68 @@ body {
     padding: 1.8rem;
     display: grid;
     gap: 1rem;
+    h1 {
+      color: $clr-Very-Dark-Grayish-Blue;
+    }
   }
   &__description {
-    color: $clr-Grayish-Blue;
     font-weight: $fw-bold;
   }
   /* &__title{
         margin-block: 1rem;
         
     } */
-  &__flex-group {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-    img {
-      height: 60px;
-      width: 60px;
-      border-radius: 50rem;
+
+  &__bottom {
+    /* background: $clr-Very-Dark-Grayish-Blue; */
+
+    .flex-group {
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .group-default {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        p span {
+          color: $clr-Very-Dark-Grayish-Blue;
+          font-weight: $fw-bold;
+          
+        }
+        img {
+          border-radius: 15rem;
+        }
+      }
+      .group-hidden{
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        p{
+            letter-spacing: 6px;
+        }
+        div{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+      }
+      .hidden {
+        display: none;
+      }
     }
+  }
+  .bottom-active {
+    background-color: $clr-Very-Dark-Grayish-Blue;
+  }
+
+  .container-button {
     display: flex;
-    align-items: center;
+    .article-button {
+      border: none;
+      padding: 0.6rem;
+      cursor: pointer;
+      border-radius: 15rem;
+    }
   }
 }

@@ -75,6 +75,7 @@ body {
   background-color: white;
   border-radius: 1rem;
   overflow: hidden;
+  color: hsl(212, 23%, 69%);
   /* &__title{
         margin-block: 1rem;
 
@@ -90,19 +91,58 @@ body {
   display: grid;
   gap: 1rem;
 }
+.article__content h1 {
+  color: hsl(217, 19%, 35%);
+}
 .article__description {
-  color: hsl(212, 23%, 69%);
   font-weight: 700;
 }
-.article__flex-group {
-  margin-top: 1rem;
+.article__bottom {
+  /* background: $clr-Very-Dark-Grayish-Blue; */
+}
+.article__bottom .flex-group {
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
-  display: flex;
   align-items: center;
 }
-.article__flex-group img {
-  height: 60px;
-  width: 60px;
-  border-radius: 50rem;
+.article__bottom .flex-group .group-default {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.article__bottom .flex-group .group-default p span {
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+.article__bottom .flex-group .group-default img {
+  border-radius: 15rem;
+}
+.article__bottom .flex-group .group-hidden {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.article__bottom .flex-group .group-hidden p {
+  letter-spacing: 6px;
+}
+.article__bottom .flex-group .group-hidden div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.article__bottom .flex-group .hidden {
+  display: none;
+}
+.article .bottom-active {
+  background-color: hsl(217, 19%, 35%);
+}
+.article .container-button {
+  display: flex;
+}
+.article .container-button .article-button {
+  border: none;
+  padding: 0.6rem;
+  cursor: pointer;
+  border-radius: 15rem;
 }/*# sourceMappingURL=main.css.map */
