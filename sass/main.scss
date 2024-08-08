@@ -1,5 +1,6 @@
 @import "abstracts/variables";
 @import "core/reset";
+@import "abstracts/mixins/media-queries";
 
 body {
   font-family: $ff-manrope;
@@ -12,83 +13,87 @@ body {
   margin-left: 1rem;
 }
 .article {
-  max-width: 600px;
-  background-color: white;
+  border: 1px solid orange;
   border-radius: 1rem;
   overflow: hidden;
   color: $clr-Grayish-Blue;
+  background: white;
+
   &__img {
     img {
-      width: 100%;
       object-fit: cover;
     }
   }
   &__content {
-    padding: 1.8rem;
+    padding: 1.8rem 1.8rem 0;
     display: grid;
     gap: 1rem;
     h1 {
       color: $clr-Very-Dark-Grayish-Blue;
     }
-  }
-  &__description {
-    font-weight: $fw-bold;
-  }
-  /* &__title{
-        margin-block: 1rem;
-        
-    } */
-
-  &__bottom {
-    /* background: $clr-Very-Dark-Grayish-Blue; */
-
-    .flex-group {
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .group-default {
-        display: flex;
-        gap: 2rem;
-        align-items: center;
-        p span {
-          color: $clr-Very-Dark-Grayish-Blue;
-          font-weight: $fw-bold;
-          
-        }
-        img {
-          border-radius: 15rem;
-        }
-      }
-      .group-hidden{
-        display: flex;
-        align-items: center;
-        gap: 1.2rem;
-        p{
-            letter-spacing: 6px;
-        }
-        div{
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-      }
-      .hidden {
-        display: none;
-      }
+    p {
+      font-weight: $fw-bold;
     }
   }
-  .bottom-active {
-    background-color: $clr-Very-Dark-Grayish-Blue;
-  }
 
-  .container-button {
+  &__bottom {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-inline: 1.8rem;
+    padding-block: 1rem;
+
+    &.bottom-socials {
+      height: 74px;
+      display: flex;
+      align-items: center;
+      @include mobile {
+        background: $clr-Very-Dark-Grayish-Blue;
+      }
+    }
+    .default-group {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      p span {
+        color: $clr-Desaturated-Dark-Blue;
+        font-weight: $fw-bold;
+      }
+      img {
+        height: 1.8rem;
+        border-radius: 15rem;
+      }
+    }
+    .hidden-group {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      p {
+        letter-spacing: 6px;
+      }
+      div {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+    }
+    .hidden {
+      display: none;
+    }
     .article-button {
       border: none;
       padding: 0.6rem;
-      cursor: pointer;
       border-radius: 15rem;
+      cursor: pointer;
+
+      &.button-active {
+        background-color: $clr-Desaturated-Dark-Blue;
+        svg path{
+          fill: white;
+        }
+        
+      }
     }
   }
 }

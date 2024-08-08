@@ -71,78 +71,83 @@ body {
 }
 
 .article {
-  max-width: 600px;
-  background-color: white;
+  border: 1px solid orange;
   border-radius: 1rem;
   overflow: hidden;
   color: hsl(212, 23%, 69%);
-  /* &__title{
-        margin-block: 1rem;
-
-    } */
+  background: white;
 }
 .article__img img {
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .article__content {
-  padding: 1.8rem;
+  padding: 1.8rem 1.8rem 0;
   display: grid;
   gap: 1rem;
 }
 .article__content h1 {
   color: hsl(217, 19%, 35%);
 }
-.article__description {
+.article__content p {
   font-weight: 700;
 }
 .article__bottom {
-  /* background: $clr-Very-Dark-Grayish-Blue; */
-}
-.article__bottom .flex-group {
-  padding: 1rem 2rem;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
+  margin-top: 1rem;
+  padding-inline: 1.8rem;
+  padding-block: 1rem;
 }
-.article__bottom .flex-group .group-default {
+.article__bottom.bottom-socials {
+  height: 74px;
   display: flex;
-  gap: 2rem;
   align-items: center;
 }
-.article__bottom .flex-group .group-default p span {
-  color: hsl(217, 19%, 35%);
+@media screen and (max-width: 475px) {
+  .article__bottom.bottom-socials {
+    background: hsl(217, 19%, 35%);
+  }
+}
+.article__bottom .default-group {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.article__bottom .default-group p span {
+  color: hsl(214, 17%, 51%);
   font-weight: 700;
 }
-.article__bottom .flex-group .group-default img {
+.article__bottom .default-group img {
+  height: 1.8rem;
   border-radius: 15rem;
 }
-.article__bottom .flex-group .group-hidden {
+.article__bottom .hidden-group {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1.6rem;
 }
-.article__bottom .flex-group .group-hidden p {
+.article__bottom .hidden-group p {
   letter-spacing: 6px;
 }
-.article__bottom .flex-group .group-hidden div {
+.article__bottom .hidden-group div {
   display: flex;
-  align-items: center;
   gap: 1rem;
+  align-items: center;
 }
-.article__bottom .flex-group .hidden {
+.article__bottom .hidden {
   display: none;
 }
-.article .bottom-active {
-  background-color: hsl(217, 19%, 35%);
-}
-.article .container-button {
-  display: flex;
-}
-.article .container-button .article-button {
+.article__bottom .article-button {
   border: none;
   padding: 0.6rem;
-  cursor: pointer;
   border-radius: 15rem;
+  cursor: pointer;
+}
+.article__bottom .article-button.button-active {
+  background-color: hsl(214, 17%, 51%);
+}
+.article__bottom .article-button.button-active svg path {
+  fill: white;
 }/*# sourceMappingURL=main.css.map */
